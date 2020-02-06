@@ -1,0 +1,44 @@
+2000        PRO      START   2000
+2003 002054 FIRST    LDA     AA
+2006 182057          ADD     BB
+2009 182072          ADD     ONE
+200c 0C205d          STA     CC
+200f 00205d          LDA     CC
+2012 1C205a          SUB     DD
+2015 1C2075          SUB     TWO
+2018 0C2060          STA     EE
+201b 002060          LDA     EE
+201e 202054          MUL     AA
+2021 202078          MUL     THREE
+2024 0C2063          STA     FF
+2027 002060          LDA     EE
+202a 242054          DIV     AA
+202d 24207b          DIV     FOUR
+2030 0C2066          STA     GG
+2033 002066          LDA     GG
+2036 202078          MUL     THREE
+2039 0C2069          STA     HH
+203c 00206f          LDA     ZERO
+203f 0C206c          STA     II
+2042 002063          LDA     FF
+2045 282069          COMP    HH
+2048 382081          JLT     LAST
+204b 002066          LDA     GG
+204e 24207e          DIV     SIX
+2051 0C206c          STA     II
+2054 000002 AA       WORD    2
+2057 000007 BB       WORD    7
+205a 000003 DD       WORD    3
+205d        CC       RESW    1
+2060        EE       RESW    1
+2063        FF       RESW    1
+2066        GG       RESW    1
+2069        HH       RESW    1
+206c        II       RESW    1
+206f 000000 ZERO     WORD    0
+2072 000001 ONE      WORD    1
+2075 000002 TWO      WORD    2
+2078 000003 THREE    WORD    3
+207b 000004 FOUR     WORD    4
+207e 000006 SIX      WORD    6
+2081        LAST     END     FIRST
